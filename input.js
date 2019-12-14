@@ -14,7 +14,7 @@ function getKeyword(callback) {
   prompt.get(keywordSchema, (err, result) => {
     if (err) {
       callback(err);
-      throw err;
+      //throw err;
     }
 
     console.log(`The keyword is: ${result.keyword}`);
