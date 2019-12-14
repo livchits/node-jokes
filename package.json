@@ -1,0 +1,24 @@
+{
+  "name": "node-jokes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livchits/node-jokes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livchits/node-jokes/issues"
+  },
+  "homepage": "https://github.com/livchits/node-jokes#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "prompt": "^1.0.0"
+  }
+}
