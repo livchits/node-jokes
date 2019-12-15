@@ -22,7 +22,7 @@ function getJokes(err, keyword) {
     }
   };
 
-  return request(options, parseJokes); //¿Es necesario el return? Sin él, funciona
+  request(options, parseJokes); //¿Es necesario el return? Sin él, funciona
 }
 
 //return getJokes(keyword)
