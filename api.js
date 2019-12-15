@@ -6,7 +6,16 @@ function parseJokes(error, response, body) {
     // console.log('Hey ->', data.results)
     return data.results; //en lugar de retornar los datos debería pasárselos a una callback con la lógica de ¿outoput?
   } else {
-    throw error; //en lugar de enviar el error debería pasarle el error a la callback con la lógica de output
+    throw error; //en lugar de enviar el error debería pasarle el error a la callback con la lógica de output. De hecho debería lamar primero a la callback con el error, luego a la callback con los datos, algo así
+    /*
+    if (error) {
+      callback(error)
+    } else {
+      const data = JSON.parse(body);
+      callback(null, data.results)
+    }
+
+    */
   }
 }
 
@@ -22,7 +31,7 @@ function getJokes(err, keyword) {
     }
   };
 
-  request(options, parseJokes); //¿Es necesario el return? Sin él, funciona
+  request(options, parseJokes);
 }
 
 //return getJokes(keyword)
