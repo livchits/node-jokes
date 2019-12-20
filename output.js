@@ -12,6 +12,16 @@ function printJokes(jokesArray) {
   }
 }
 
+function writeJoke(jokeObject) {
+  const jokeText = jokeObject.joke + '\n\n';
+  appendFile('jokes.txt',jokeText, err => {
+    if (err) {
+      throw err;
+    }
+  })
+}
+
 module.exports = {
-  printJokes
+  printJokes,
+  writeJoke
 };
