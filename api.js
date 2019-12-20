@@ -1,9 +1,10 @@
 const request = require('request');
+const { printJokes } = require('./output');
 
 function parseJokes(error, response, body) {
   if (!error && response.statusCode == 200) {
     const data = JSON.parse(body);
-    return data.results; //en lugar de retornar los datos debería pasárselos a una callback con la lógica de outoput
+    printJokes(data.results);
   } else {
     throw error; //en lugar de enviar el error debería pasarle el error a la callback con la lógica de output.
   }
