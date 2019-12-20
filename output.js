@@ -11,3 +11,7 @@ function printJokes(jokesArray) {
     jokesArray.forEach(printInGreen);
   }
 }
+
+module.exports = {
+  printJokes
+};
