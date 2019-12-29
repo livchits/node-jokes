@@ -11,11 +11,7 @@ function parseJokes(error, response, body) {
   }
 }
 
-function getJokes(err, keyword) {
-  if (err) {
-    throw err;
-  }
-
+function getJokes(keyword) {
   const options = {
     url: `https://icanhazdadjoke.com/search?term=${keyword}`,
     headers: {
