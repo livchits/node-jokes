@@ -1,5 +1,5 @@
 const request = require('request');
-const { printJokes, writeJokes } = require('./output');
+const { printJokes, writeJoke } = require('./output');
 
 function parseJokes(error, response, body) {
   if (!error && response.statusCode == 200) {
