@@ -18,7 +18,7 @@ function getKeyword(callback) {
 
     console.log(`The keyword is: ${result.keyword}`);
 
-    callback(null, result.keyword);
+    callback(result.keyword);
   });
 }
 
