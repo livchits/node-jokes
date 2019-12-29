@@ -7,7 +7,7 @@ function parseJokes(error, response, body) {
     printJokes(data.results);
     data.results.forEach(writeJoke);
   } else {
-    throw error; //en lugar de enviar el error debería pasarle el error a la callback con la lógica de output.
+    throw error;
   }
 }
 
