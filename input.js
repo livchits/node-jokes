@@ -1,11 +1,10 @@
 const prompt = require('prompt');
 
 const keywordSchema = {
-  properties: {
-    keyword: {
-      message: 'Enter a keyword'
-    }
-  }
+  name: 'keyword',
+  description: 'Enter a keyword',
+  required: true,
+  message: "Input mustn't be empty"
 };
 
 function getKeyword(callback) {
