@@ -6,11 +6,9 @@ function printInGreen(jokeObject) {
 }
 
 function printJokes(jokesArray) {
-  if (jokesArray.length === 0) {
-    console.log(chalk.red('Acá no hacemos chistes con esas cosas.'));
-  } else {
-    jokesArray.forEach(printInGreen);
-  }
+  jokesArray.length === 0
+    ? console.log(chalk.red('Acá no hacemos chistes con esas cosas.'))
+    : jokesArray.forEach(printInGreen);
 }
 
 function writeJoke(jokeObject) {
