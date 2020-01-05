@@ -19,3 +19,5 @@ function getMostPopularJoke(jokesArray) {
 function sortJokes(array) {
   return array.sort((a, b) => b[1] - a[1]);
 }
+
+module.exports = { getMostPopularJoke };
