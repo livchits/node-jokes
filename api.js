@@ -1,5 +1,5 @@
 const request = require('request');
-const { printJokes, writeJoke } = require('./output');
+const { printJokes, writeJoke, printMostPopularJoke } = require('./output');
 
 function parseJokes(error, response, body) {
   if (!error && response.statusCode == 200) {
@@ -12,6 +12,10 @@ function parseJokes(error, response, body) {
 }
 
 function getJokes(keyword) {
+  if (keyword.split(' ')[1] === 'leaderboard') {
+    return printMostPopularJoke();
+  }
+
   const options = {
     url: `https://icanhazdadjoke.com/search?term=${keyword}`,
     headers: {
