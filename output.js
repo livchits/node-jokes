@@ -6,7 +6,7 @@ function printInGreen(jokeObject) {
 }
 
 function printJokes(jokesArray) {
-  jokesArray.length === 0
+  !jokesArray.length
     ? console.log(chalk.red('Acá no hacemos chistes con esas cosas.'))
     : jokesArray.forEach(printInGreen);
 }
