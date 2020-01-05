@@ -22,8 +22,6 @@ function getKeyword(callback) {
   });
 }
 
-//return getKeyword();
-
 module.exports = {
   getKeyword
 };
