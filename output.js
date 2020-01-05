@@ -1,5 +1,6 @@
 const chalk = require('chalk');
-const { appendFile } = require('fs');
+const { appendFile, readFile } = require('fs');
+const { getMostPopularJoke } = require('./leaderboard');
 
 function printInGreen(jokeObject) {
   console.log(chalk.green(`"${jokeObject.joke}"`));
@@ -20,7 +21,19 @@ function writeJoke(jokeObject) {
   });
 }
 
+function printMostPopularJoke() {
+  readFile('jokes.txt', (err, data) => {
+    if (err) throw err;
+
+    const jokesArray = data.toString().split('\n\n');
+    const mostPopularJoke = getMostPopularJoke(jokesArray);
+    console.log(`"${mostPopularJoke}"`);
+    console.log(chalk.blue('#ElMásPopular'));
+  });
+}
+
 module.exports = {
   printJokes,
-  writeJoke
+  writeJoke,
+  printMostPopularJoke
 };
