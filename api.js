@@ -12,7 +12,7 @@ function parseJokes(error, response, body) {
 }
 
 function getJokes(keyword) {
-  if (keyword.split(' ')[1] === 'leaderboard') {
+  if (keyword === 'leaderboard') {
     return printMostPopularJoke();
   }
 
