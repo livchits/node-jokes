@@ -28,7 +28,7 @@ function printMostPopularJoke() {
     const jokesArray = data.toString().split('\n\n');
     const mostPopularJoke = getMostPopularJoke(jokesArray);
     console.log(`"${mostPopularJoke}"`);
-    console.log(chalk.blue('#ElMásPopular'));
+    console.log(chalk.rgb(0, 47, 255).bold('#ElMásPopular'));
   });
 }
 
