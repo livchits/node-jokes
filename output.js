@@ -8,13 +8,13 @@ function printInGreen(jokeObject) {
 
 function printJokes(jokesArray) {
   !jokesArray.length
-    ? console.log(chalk.red('Acá no hacemos chistes con esas cosas.'))
+    ? console.log(chalk.red("We don't make jokes about that 🤐"))
     : jokesArray.forEach(printInGreen);
 }
 
 function writeJoke(jokeObject) {
   const jokeText = jokeObject.joke + '\n\n';
-  appendFile('jokes.txt', jokeText, err => {
+  appendFile('jokes.txt', jokeText, (err) => {
     if (err) {
       throw err;
     }
@@ -35,5 +35,5 @@ ${chalk.rgb(0, 47, 255).bold('#ElMásPopular')}`);
 module.exports = {
   printJokes,
   writeJoke,
-  printMostPopularJoke
+  printMostPopularJoke,
 };
