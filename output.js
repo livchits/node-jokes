@@ -7,9 +7,9 @@ function printInGreen(jokeObject) {
 }
 
 function printJokes(jokesArray) {
-  !jokesArray.length
-    ? console.log(chalk.red("We don't make jokes about that 🤐"))
-    : jokesArray.forEach(printInGreen);
+  jokesArray.length
+    ? jokesArray.forEach(printInGreen)
+    : console.log(chalk.red("We don't make jokes about that 🤐"));
 }
 
 function writeJoke(jokeObject) {
